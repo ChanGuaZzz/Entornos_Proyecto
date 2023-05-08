@@ -1,11 +1,12 @@
-<<<<<<< HEAD
 <DOCTYPE html>
     <html>
 
     <head>
+        
         <meta charset="UTF-8">
         <title>Soporte_FormLegacy</title>
         <link rel="stylesheet" href="../EstilosCSS/EstiloCss.css">
+        <title>Soporte</title>
     </head>
 
     <body>
@@ -13,10 +14,10 @@
         <header>
             <div class="div1">
                 <div class="logo"><img id="fotologo" src="../Imagenes/Logo1.png"></img></div>
-                <h1 class="titulo">FORM LEGACY</h1>
+                <h1  class="titulo">FORM LEGACY</h1>
                 <h3 class="subtitulo">"Descubre la moda que habla de ti: Nuestra ropa cuenta tu historia"</h3>
-                <div class="prendas">
-                    <script src="../JavaScript/desplegable.js"></script>
+                <div id="prendas">
+                    
                     <!--<div class="desplegable">
                         <a href="#" class="desplegable-toggle">Prendas</a>
                         <ul class="desplegable-menu">
@@ -25,17 +26,20 @@
                         </ul>
                       </div>-->
                     <details>
-                        <summary>Prendas</summary>
+                        <summary id="botonprendas">Prendas</summary>
                         <ul class="desplegable">
                             <li><a  href="PaginaCamisetas.html">Camisetas</a></li>
+                            <br>
                             <li><a  href="PaginaAccesorios.html">Accesorios</a></li>
                         </ul>
                     </details>
                 </div>
                 
-                <div class="promociones">Promociones</div>
+                <div class="promociones"><a href="PaginaPrincipal.html">Promociones</a></div>
                 <div class="soporte"><a  href="PaginaSoporte.html">Soporte</a></div>
+                
             </div>
+            
         </header>
 
 
@@ -106,7 +110,24 @@
                             <h3>958 74 35 69</h3>
                             <br>
                             <h2 class="atentionclienteduda">¿Alguna duda? </h2>
-                            <div class="comentarios">Escribe aqui...</div>
+                            <input name="texto" id="comentarios" cols="30" rows="10" placeholder="Ingrese la duda aqui..."></input>
+                            <br>
+                            <button id="enviar" onclick="limpiarInput()" type="submit">Enviar</button>
+                            <script type="text/javascript">
+                               function limpiarInput() {
+                                document.getElementById("comentarios").value = "";
+                            }
+                            </script>
+                            <script type="text/javascript">
+                                const cambiar=document.getElementById("enviar");
+                                enviar.addEventListener('click', function() {
+                                cambiar.textContent="Enviado";
+                                cambiar.style.width="65px";
+                                cambiar.style.marginBottom="16px";
+                                cambiar.style.boxShadow="0px 0px 20px black";
+                                cambiar.style.height="20px";
+                                })
+                            </script>
                         </div>
                     </div>
                 </div>
@@ -122,19 +143,8 @@
                 </center>
             </div>
         </footer>
+        <script src="../JavaScript/desplegable.js"></script>
     </body>
 
     </html>
 </DOCTYPE>
-=======
-<!DOCTYPE html>
-    <head>
-        <meta charset="UTF-8">
-        <title>Accesorios_Form_Legacy</title>
-        <link rel="stylesheet" href="../EstilosCSS/">
-    </head>
-    <body>
-        <div id="divLogo"></div>
-    </body>
-<DOCTYPE>
->>>>>>> 7b681049f23c9b67879a4a1cec600ec98b5956c5
